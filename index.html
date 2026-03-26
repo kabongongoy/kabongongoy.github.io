@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henry Faleye | Cloud &amp; Network Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3e;
+      --accent: #4f8ef7;
+      --accent-dim: #1e3a6e;
+      --text: #e2e8f0;
+      --text-muted: #8892a4;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    header, main, footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Hero ── */
+    header {
+      padding-top: 80px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-location {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .hero-location::before { content: "📍 "; }
+
+    /* ── Sections ── */
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    p { color: var(--text-muted); max-width: 620px; }
+
+    /* ── Skills ── */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .skill {
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .skill.learning {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text-muted);
+    }
+
+    /* ── Project card ── */
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover { border-color: var(--accent); }
+
+    .project-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .project-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* ── Contact ── */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding-top: 32px;
+      padding-bottom: 48px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <p class="hero-label">Portfolio</p>
+    <h1>Henry Faleye</h1>
+    <p class="hero-title">Cloud &amp; Network Engineer &nbsp;·&nbsp; AWS Engineer</p>
+    <p class="hero-location">Brisbane, Australia</p>
+  </header>
+
+  <main>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a Cloud &amp; Network Engineer with a primary focus on AWS, building scalable and reliable infrastructure for production workloads. I'm expanding my expertise across GCP and Azure, and work with Kubernetes to orchestrate containerised services. I leverage AI tooling — including Claude Code — to accelerate infrastructure development and automation.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">AWS</span>
+        <span class="skill">Kubernetes</span>
+        <span class="skill">Terraform</span>
+        <span class="skill">CloudFormation</span>
+        <span class="skill">Prometheus</span>
+        <span class="skill">Python</span>
+        <span class="skill">Linux</span>
+        <span class="skill">Windows</span>
+        <span class="skill">VMware</span>
+        <span class="skill">Claude Code</span>
+        <span class="skill learning">GCP (learning)</span>
+        <span class="skill learning">Azure (learning)</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>database-monitoring</h3>
+        <p>Terraform + Python infrastructure-as-code project that provisions and configures database monitoring on AWS. Uses reusable Terraform modules to manage monitoring resources as code.</p>
+        <div class="project-tags">
+          <span class="tag">Terraform</span>
+          <span class="tag">Python</span>
+          <span class="tag">AWS</span>
+          <span class="tag">IaC</span>
+        </div>
+        <a class="project-link" href="https://github.com/kabongongoy/database-monitoring" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:afaleye@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          afaleye@gmail.com
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/henry-faleye-8519939/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="contact-link" href="https://github.com/kabongongoy" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Henry Faleye</p>
+  </footer>
+
+</body>
+</html>

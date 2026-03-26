@@ -199,6 +199,26 @@
       text-decoration: none;
     }
 
+    /* ── Avatar ── */
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .hero-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+      .hero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+    }
+
     /* ── Footer ── */
     footer {
       padding-top: 32px;
@@ -213,9 +233,14 @@
   <!-- Hero -->
   <header>
     <p class="hero-label">Portfolio</p>
-    <h1>Henry Faleye</h1>
-    <p class="hero-title">Cloud &amp; Network Engineer &nbsp;·&nbsp; AWS Engineer</p>
-    <p class="hero-location">Brisbane, Australia</p>
+    <div class="hero-inner">
+      <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/100330562?v=4" alt="Henry Faleye" />
+      <div>
+        <h1>Henry Faleye</h1>
+        <p class="hero-title">Cloud &amp; Network Engineer &nbsp;·&nbsp; AWS Engineer</p>
+        <p class="hero-location">Brisbane, Australia</p>
+      </div>
+    </div>
   </header>
 
   <main>
